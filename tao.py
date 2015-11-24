@@ -44,7 +44,7 @@ class Tao():
 
         with open('model/architecture.json', 'r') as f:
             self.model = model_from_json(f.read())
-        self.model.load_weights('model/tao_weights.h5')
+        self.model.load_weights('model/weights.h5')
 
     def _build_model(self):
         print('Building model...')
