@@ -1,3 +1,10 @@
+## Installation
+```
+mkvirtualenv tao
+pip install -r requirements.txt
+```
+
+## Usage
 To create the Tao:
 
     from tao import Tao
