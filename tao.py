@@ -11,7 +11,7 @@ from keras.layers.core import Dense, Activation, Dropout
 class Tao():
     def __init__(self):
         texts = []
-        for f in glob('docs/tao_te_ching/output/**/*.txt'):
+        for f in glob('docs/output/**/*.txt'):
             texts.append(open(f, 'r').read())
         self.text = '\n'.join(texts)
         self.max_len = 20
@@ -110,7 +110,7 @@ class Tao():
             y[i, self.char_idxs[next_chars[i]]] = 1
 
         print('Training model...')
-        epochs = 10
+
         for i in range(epochs):
             print('Epoch', i)
             self.model.fit(X, y, batch_size=128, nb_epoch=1)
